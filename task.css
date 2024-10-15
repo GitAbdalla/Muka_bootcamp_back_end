@@ -1,0 +1,111 @@
+*{
+    font-family: Roboto Slab;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3{
+    font-family: Open Sans;
+}
+header,nav{
+    text-align: center;
+    background-color:#333;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+nav ul {
+    list-style: none;
+    padding: 30px;
+    display: inline-flex;
+   
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.about{
+    padding: 20px;
+    background-color: rgb(232, 229, 229);
+    text-align: center;
+    height: 200px;
+    
+}
+.about p{
+    padding: 20px;
+}
+.Projects h2{
+    padding: 10px;
+}
+.Projects ol li h3  {
+    padding: 10px;
+}
+.Projects ol p  {
+    padding: 10px;
+}
+.Projects ol a  {
+    padding: 10px;
+    color: black;
+}
+.skills {
+    background-color: rgb(232, 229, 229);
+    padding: 10px;
+    text-align: center; 
+}
+
+.skills h2 {
+    padding: 10px;
+}
+
+table {
+    height: 200px;
+    width: 50%;
+    margin: 0 auto; 
+    border-collapse: collapse; 
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid black; 
+}
+a:hover{
+color: aqua;
+}
+div{
+    text-align: center;
+}
+input{
+    width: 350px;
+}
+textarea{
+    width:350px ;
+}
+label{
+    display: flex;
+    margin-left:600px;
+    padding-top: 20px;
+}
+button {
+    display: block;
+    margin: 20px auto; 
+    background-color: black;
+    color: white;
+    width: 350px;  
+}
+  
+ footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+  }
+  
+footer p {
+    margin: 0;
+}
