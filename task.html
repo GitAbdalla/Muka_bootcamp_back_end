@@ -23,35 +23,45 @@
       <h1>Abdalla</h1>
       <nav>
         <ul>
-          <li><a href="">About Me</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Skills</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="about">
+    <button id="themeToggle">Toggle Theme</button>
+
+    <section id="about" class="about">
       <h2>About Me</h2>
-      <p>
+      <p id="aboutMe">
         Hi iam abdalla hassan software engineer interested in backend
         development, fresh graduate frm FCI
       </p>
+      <button id="updateAboutMe">update About Me</button>
     </section>
-    <section class="Projects">
+    <section id="projects" class="Projects">
       <h2>Projects</h2>
       <ol>
         <li><h3>First Project</h3></li>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat assumenda excepturi quod temporibus? </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+          repellat assumenda excepturi quod temporibus?
+        </p>
         <a href="">View Project</a>
         <li><h3>Second Project</h3></li>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat assumenda excepturi quod temporibus?</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+          repellat assumenda excepturi quod temporibus?
+        </p>
         <a href="">View Project</a>
       </ol>
     </section>
-    <section class="skills">
+
+    <section id="skills" class="skills">
       <h2>Skills</h2>
-      <table >
+      <table>
         <tr bgcolor="lightgrey" align="center">
           <th>Skill</th>
           <td>HTML</td>
@@ -65,27 +75,50 @@
           <td>intermediate</td>
         </tr>
       </table>
-    </section>
-    <section class="Contact">
-      <h2>Contact</h2>
-      <div>
-        <label for="">Name:</label>
-        <br />
-        <input type="text" />
+      <div class="skill-container">
+        <h4>HTML</h4>
+        <div class="skill-bar">
+          <div class="skill-level" id="htmlSkill"></div>
+        </div>
+    
+        <h4>CSS</h4>
+        <div class="skill-bar">
+          <div class="skill-level" id="cssSkill"></div>
+        </div>
+    
+        <h4>JavaScript</h4>
+        <div class="skill-bar">
+          <div class="skill-level" id="jsSkill"></div>
+        </div>
       </div>
-      <div>
-        <label for="">Email:</label>
-        <br />
-        <input type="text" />
-      </div>
-      <div>
-        <label for="">Message:</label>
-        <br />
-        <textarea></textarea>
-      </div>
-      <button>Send Message</button>
     </section>
 
+    <section id="contact" class="Contact">
+      <h2>Contact</h2>
+      <form action="" id="contactForm">
+        <div>
+          <label for="">Name:</label>
+          <br />
+          <input type="text" id="name" placeholder="your name" />
+        </div>
+        <div>
+          <label for="">Email:</label>
+          <br />
+          <input type="text" id="email" placeholder="your email" />
+        </div>
+        <div>
+          <label for="">Message:</label>
+          <br />
+          <textarea></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+        <p id="errorMessage" style="color: red; text-align: center"></p>
+      </form>
+    </section>
     <footer>&copy; 2024 Abdalla. All right reserved</footer>
+    
+    <button id="scrollTopBtn" style="display: none;">Top</button>
+
+    <script src="task.js"></script>
   </body>
 </html>
