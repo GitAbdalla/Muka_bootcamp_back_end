@@ -94,3 +94,68 @@ function multiply(a, b) {
 const multiplyArrow = (a, b) => a * b;
 
 console.log(multiplyArrow(4, 5));
+
+// Control flow
+function checkAge(age) {
+  if (age >= 18) {
+    console.log("You are eligible ");
+  } else {
+    console.log("You are not eligible ");
+  }
+}
+
+checkAge(20);
+
+function getDayOfWeek(dayNumber) {
+  switch (dayNumber) {
+    case 1:
+      console.log("Saturday");
+      break;
+    case 2:
+      console.log("Sunday");
+      break;
+    case 3:
+      console.log("Monday");
+      break;
+    case 4:
+      console.log("Tuesday");
+      break;
+    case 5:
+      console.log("wednesday");
+      break;
+    case 6:
+      console.log("Thursday");
+      break;
+    case 7:
+      console.log("Friday");
+      break;
+    default:
+      console.log("Invalid day");
+  }
+}
+
+getDayOfWeek(0);
+
+const names = ["Ichraf", "Youssef", "Ziad", "Ahmed", "Ibrahim"]; // this is the names of mentors i know
+
+for (let i = 0; i < names.length; i++) {
+  console.log(names[i]);
+}
+
+let cnt = 1;
+while (cnt <= 10) {
+  console.log(cnt);
+  cnt++;
+}
+
+function even (start , end){
+    let arr = []
+
+    for(let i = start; i<= end; i++){
+        if(i % 2 === 0){
+            arr.push(i)
+        }
+    }
+    console.log(arr)
+}
+even(0 , 20)
