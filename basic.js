@@ -60,102 +60,140 @@
 // console.log(false + 2 ) // false = 0
 
 //------------------------------------------------------------//
-// Function Declaration
-function greetDeclaration(name) {
-  return `Hello, ${name} from a declaration!`;
-}
-console.log(greetDeclaration("Abdalla"));
+// // Function Declaration
+// function greetDeclaration(name) {
+//   return `Hello, ${name} from a declaration!`;
+// }
+// console.log(greetDeclaration("Abdalla"));
 
-// Function Expression
-const greetExpression = function (name) {
-  return `Hello, ${name} from an expression!`;
-};
-console.log(greetExpression("Hassan"));
+// // Function Expression
+// const greetExpression = function (name) {
+//   return `Hello, ${name} from an expression!`;
+// };
+// console.log(greetExpression("Hassan"));
 
-// Arrow Function
-const greetArrow = (name) => `Hello, ${name} from an arrow function!`;
-console.log(greetArrow("Moahmed"));
+// // Arrow Function
+// const greetArrow = (name) => `Hello, ${name} from an arrow function!`;
+// console.log(greetArrow("Moahmed"));
 
-function findMax(arr) {
-  let max = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
-  }
-  return max;
-}
-console.log(findMax([10, 20, 30, 5, 15]));
+// function findMax(arr) {
+//   let max = arr[0];
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+// console.log(findMax([10, 20, 30, 5, 15]));
 
-function multiply(a, b) {
-  return a * b;
-}
+// function multiply(a, b) {
+//   return a * b;
+// }
 
-const multiplyArrow = (a, b) => a * b;
+// const multiplyArrow = (a, b) => a * b;
 
-console.log(multiplyArrow(4, 5));
+// console.log(multiplyArrow(4, 5));
 
-// Control flow
-function checkAge(age) {
-  if (age >= 18) {
-    console.log("You are eligible ");
-  } else {
-    console.log("You are not eligible ");
-  }
-}
+// // Control flow
+// function checkAge(age) {
+//   if (age >= 18) {
+//     console.log("You are eligible ");
+//   } else {
+//     console.log("You are not eligible ");
+//   }
+// }
 
-checkAge(20);
+// checkAge(20);
 
-function getDayOfWeek(dayNumber) {
-  switch (dayNumber) {
-    case 1:
-      console.log("Saturday");
-      break;
-    case 2:
-      console.log("Sunday");
-      break;
-    case 3:
-      console.log("Monday");
-      break;
-    case 4:
-      console.log("Tuesday");
-      break;
-    case 5:
-      console.log("wednesday");
-      break;
-    case 6:
-      console.log("Thursday");
-      break;
-    case 7:
-      console.log("Friday");
-      break;
-    default:
-      console.log("Invalid day");
-  }
-}
+// function getDayOfWeek(dayNumber) {
+//   switch (dayNumber) {
+//     case 1:
+//       console.log("Saturday");
+//       break;
+//     case 2:
+//       console.log("Sunday");
+//       break;
+//     case 3:
+//       console.log("Monday");
+//       break;
+//     case 4:
+//       console.log("Tuesday");
+//       break;
+//     case 5:
+//       console.log("wednesday");
+//       break;
+//     case 6:
+//       console.log("Thursday");
+//       break;
+//     case 7:
+//       console.log("Friday");
+//       break;
+//     default:
+//       console.log("Invalid day");
+//   }
+// }
 
-getDayOfWeek(0);
+// getDayOfWeek(0);
 
-const names = ["Ichraf", "Youssef", "Ziad", "Ahmed", "Ibrahim"]; // this is the names of mentors i know
+// const names = ["Ichraf", "Youssef", "Ziad", "Ahmed", "Ibrahim"]; // this is the names of mentors i know
 
-for (let i = 0; i < names.length; i++) {
-  console.log(names[i]);
-}
+// for (let i = 0; i < names.length; i++) {
+//   console.log(names[i]);
+// }
 
-let cnt = 1;
-while (cnt <= 10) {
-  console.log(cnt);
-  cnt++;
-}
+// let cnt = 1;
+// while (cnt <= 10) {
+//   console.log(cnt);
+//   cnt++;
+// }
 
-function even (start , end){
-    let arr = []
+// function even (start , end){
+//     let arr = []
 
-    for(let i = start; i<= end; i++){
-        if(i % 2 === 0){
-            arr.push(i)
-        }
-    }
+//     for(let i = start; i<= end; i++){
+//         if(i % 2 === 0){
+//             arr.push(i)
+//         }
+//     }
+//     console.log(arr)
+// }
+// even(0 , 20)
+
+// Arrays
+
+const mentors = ["Ichraf", "Youssef", "Ziad", "Ahmed", "Ibrahim"];
+console.log(mentors)
+
+
+function addMentor (arr, mentor){
+    arr.push(mentor)
     console.log(arr)
 }
-even(0 , 20)
+addMentor(mentors, "Abdalla")
+
+function removeMentor (arr){
+    arr.pop()
+    console.log(arr)
+}
+removeMentor(mentors)
+
+mentors.forEach((mentor , index)=>{
+    console.log(`${index} : ${mentor}`)
+})
+
+
+
+function getEven() {
+    const array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    const evenNumbers = array.filter(num => num % 2 === 0);
+    return evenNumbers;
+}
+
+console.log(getEven());
+
+const numbers = [4, 60, 98, 88, 85, 58, 98, 10, 44, 21, 77, 38, 8, 35, 3, 39, 23, 80, 23, 80];
+
+numbers.sort((a,b) => a - b) 
+
+console.log( numbers)
