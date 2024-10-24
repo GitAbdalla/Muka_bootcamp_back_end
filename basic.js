@@ -163,37 +163,102 @@
 // Arrays
 
 const mentors = ["Ichraf", "Youssef", "Ziad", "Ahmed", "Ibrahim"];
-console.log(mentors)
+console.log(mentors);
 
-
-function addMentor (arr, mentor){
-    arr.push(mentor)
-    console.log(arr)
+function addMentor(arr, mentor) {
+  arr.push(mentor);
+  console.log(arr);
 }
-addMentor(mentors, "Abdalla")
+addMentor(mentors, "Abdalla");
 
-function removeMentor (arr){
-    arr.pop()
-    console.log(arr)
+function removeMentor(arr) {
+  arr.pop();
+  console.log(arr);
 }
-removeMentor(mentors)
+removeMentor(mentors);
 
-mentors.forEach((mentor , index)=>{
-    console.log(`${index} : ${mentor}`)
-})
-
-
+mentors.forEach((mentor, index) => {
+  console.log(`${index} : ${mentor}`);
+});
 
 function getEven() {
-    const array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    const evenNumbers = array.filter(num => num % 2 === 0);
-    return evenNumbers;
+  const array = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  ];
+  const evenNumbers = array.filter((num) => num % 2 === 0);
+  return evenNumbers;
 }
 
 console.log(getEven());
 
-const numbers = [4, 60, 98, 88, 85, 58, 98, 10, 44, 21, 77, 38, 8, 35, 3, 39, 23, 80, 23, 80];
+const numbers = [
+  4, 60, 98, 88, 85, 58, 98, 10, 44, 21, 77, 38, 8, 35, 3, 39, 23, 80, 23, 80,
+];
 
-numbers.sort((a,b) => a - b) 
+numbers.sort((a, b) => a - b);
 
-console.log( numbers)
+console.log(numbers);
+
+// Objects
+
+const book = {
+  title: "The Great Gatsby",
+  author: "F. Scott Fitzgerald",
+  yearPublished: 1925,
+};
+
+function viewBook(book) {
+  for (let property in book) {
+    console.log(`${property} : ${book[property]}`);
+  }
+}
+viewBook(book);
+
+book.getDescription = function () {
+  return `${this.title} by ${this.author} wasPublished in ${this.yearPublished}`;
+};
+console.log(book.getDescription());
+
+const books = [
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    yearPublished: 1925,
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    yearPublished: 1925,
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    yearPublished: 1925,
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    yearPublished: 1925,
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    yearPublished: 1925,
+  },
+];
+
+console.log(books);
+
+function findByTitle(books, title) {
+  const foundBook = books.find((book) => book.title === title);
+
+  if (foundBook) {
+    return foundBook;
+  } else {
+    console.log("Not founded");
+  }
+}
+
+console.log(findByTitle(books, "1984"));
+
+console.log(findByTitle(books, "The Great Gatsby"));
