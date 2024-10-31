@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("books.jpg");
+    margin: 0;
+    padding: 20px;
+}
+
+.overlay {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    z-index: 1; /* Overlay above the background */
+}
+
+.container {
+    position: relative; /* Container positioned relative to overlay */
+    max-width: 500px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+    z-index: 2; /* Ensure the container is above the overlay */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #5D3A1E; /* Warm brown for headers */
+    margin-bottom: 15px; /* Add some spacing below headers */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #D7B29D; /* Light brown border */
+    border-radius: 4px; 
+    background-color: #FAF3E0; /* Light beige background */
+    transition: border-color 0.3s; 
+}
+
+input:focus {
+    border-color: #A0522D; /* Medium brown on focus */
+    outline: none; 
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #8B4513; /* Saddle brown for button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #5C3D21; /* Darker brown on hover */
+}
+
+#bookList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px; /* Add some space above the list */
+}
+
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Adjust padding for spacing */
+    border-bottom: 1px solid #D7B29D; /* Light brown divider */
+}
+
+.book-item button {
+    margin-left: 5px; 
+}
+
+span {
+    flex-grow: 1;
+    font-weight: bold;
+    color: #3E2723; /* Darker brown for book titles */
+}
+
+button + button {
+    background-color: #D32F2F; /* Red delete button */
+}
+
+button + button:hover {
+    background-color: #B71C1C; /* Darker red on hover */
+}
