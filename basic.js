@@ -318,3 +318,30 @@
 // } catch (error) {
 //     console.error(error.message);
 // }
+
+// Map
+const newMap = new Map()
+
+newMap.set('name', 'abdalla')
+newMap.set(8, 'day of my birth')
+newMap.set({ id: 1 }, 'abdalla hassan')
+// can hold primitive types or objects
+console.log(newMap.get('name'))
+
+newMap.forEach((value, key) => {
+    console.log(`${key} : ${value}`)
+})
+
+// WeakMap  
+const newWeakMap = new WeakMap()
+
+const object1 = { id: 1 }
+const object2 = { id: 2 }
+// hold only objects
+newWeakMap.set(object1,'abdalla')
+newWeakMap.set(object2,'hassan')
+
+console.log(newWeakMap.get(object1))
+console.log(newWeakMap.get(object2))
+
+// only map can make iterations
