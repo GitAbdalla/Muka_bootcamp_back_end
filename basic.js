@@ -280,7 +280,6 @@
 
 // console.log(getListStudentIds(getListStudents()));
 
-
 // function getStudentsByLocation(students, city) {
 //     return students.filter(student => student.location === city);
 // }
@@ -293,14 +292,13 @@
 
 // console.log(getStudentIdsSum(getListStudents()));
 
-
-// const weakMap = new WeakMap();  
+// const weakMap = new WeakMap();
 
 // function queryAPI(endpoint) {
 //     let count = weakMap.get(endpoint) || 0;
 
 //     if (count >= 5) {
-//         throw new Error('Endpoint load is high');        // FIRST TIME TO KNOW THIS WEAKMAP 
+//         throw new Error('Endpoint load is high');        // FIRST TIME TO KNOW THIS WEAKMAP
 
 //     }
 
@@ -320,28 +318,73 @@
 // }
 
 // Map
-const newMap = new Map()
+// const newMap = new Map()
 
-newMap.set('name', 'abdalla')
-newMap.set(8, 'day of my birth')
-newMap.set({ id: 1 }, 'abdalla hassan')
-// can hold primitive types or objects
-console.log(newMap.get('name'))
+// newMap.set('name', 'abdalla')
+// newMap.set(8, 'day of my birth')
+// newMap.set({ id: 1 }, 'abdalla hassan')
+// // can hold primitive types or objects
+// console.log(newMap.get('name'))
 
-newMap.forEach((value, key) => {
-    console.log(`${key} : ${value}`)
-})
+// newMap.forEach((value, key) => {
+//     console.log(`${key} : ${value}`)
+// })
 
-// WeakMap  
-const newWeakMap = new WeakMap()
+// // WeakMap
+// const newWeakMap = new WeakMap()
 
-const object1 = { id: 1 }
-const object2 = { id: 2 }
-// hold only objects
-newWeakMap.set(object1,'abdalla')
-newWeakMap.set(object2,'hassan')
+// const object1 = { id: 1 }
+// const object2 = { id: 2 }
+// // hold only objects
+// newWeakMap.set(object1,'abdalla')
+// newWeakMap.set(object2,'hassan')
 
-console.log(newWeakMap.get(object1))
-console.log(newWeakMap.get(object2))
+// console.log(newWeakMap.get(object1))
+// console.log(newWeakMap.get(object2))
 
 // only map can make iterations
+
+// Objects and Constructors
+
+const Me = {
+  name: "Abdalla",
+  age: 22,
+  field: "CS",
+  play: function () {
+    console.log("playing games");
+  },
+};
+console.log(Me.name, Me.age);
+Me.play();
+
+// Constructor function
+
+function Mobile(model, price, os, version) {
+  this.model = model;
+  this.price = price;
+  this.os = os;
+  this.version = version;
+
+  this.getDetails = function () {
+    return `${this.model} - ${this.price} - ${this.os} - ${this.version}`;
+  };
+
+  this.getDiscount = function (discount) {
+    return this.price - (this.price * discount) / 100;
+  };
+}
+const catalog = [
+  (moblie1 = new Mobile("samsung", 10000, "android", 1)),
+  (moblie2 = new Mobile("iphone", 40000, "ios", 2)),
+  (moblie3 = new Mobile("realme", 7000, "android", 2)),
+  (moblie4 = new Mobile("hawawei", 7000, "android", 2)),
+];
+
+console.log(moblie1);
+console.log(moblie2);
+console.log(moblie1.getDiscount(10));
+
+// Catalog
+catalog.forEach((mobile) => {
+  console.log(mobile.getDetails());
+});
