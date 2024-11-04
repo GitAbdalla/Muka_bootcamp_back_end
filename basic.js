@@ -346,45 +346,87 @@
 
 // Objects and Constructors
 
-const Me = {
-  name: "Abdalla",
-  age: 22,
-  field: "CS",
-  play: function () {
-    console.log("playing games");
-  },
-};
-console.log(Me.name, Me.age);
-Me.play();
+// const Me = {
+//   name: "Abdalla",
+//   age: 22,
+//   field: "CS",
+//   play: function () {
+//     console.log("playing games");
+//   },
+// };
+// console.log(Me.name, Me.age);
+// Me.play();
 
-// Constructor function
+// // Constructor function
 
-function Mobile(model, price, os, version) {
-  this.model = model;
-  this.price = price;
-  this.os = os;
-  this.version = version;
+// function Mobile(model, price, os, version) {
+//   this.model = model;
+//   this.price = price;
+//   this.os = os;
+//   this.version = version;
 
-  this.getDetails = function () {
-    return `${this.model} - ${this.price} - ${this.os} - ${this.version}`;
-  };
+//   this.getDetails = function () {
+//     return `${this.model} - ${this.price} - ${this.os} - ${this.version}`;
+//   };
 
-  this.getDiscount = function (discount) {
-    return this.price - (this.price * discount) / 100;
-  };
+//   this.getDiscount = function (discount) {
+//     return this.price - (this.price * discount) / 100;
+//   };
+// }
+// const catalog = [
+//   (moblie1 = new Mobile("samsung", 10000, "android", 1)),
+//   (moblie2 = new Mobile("iphone", 40000, "ios", 2)),
+//   (moblie3 = new Mobile("realme", 7000, "android", 2)),
+//   (moblie4 = new Mobile("hawawei", 7000, "android", 2)),
+// ];
+
+// console.log(moblie1);
+// console.log(moblie2);
+// console.log(moblie1.getDiscount(10));
+
+// // Catalog
+// catalog.forEach((mobile) => {
+//   console.log(mobile.getDetails());
+// });
+
+function Animal(name) {
+    this.name = name;
 }
-const catalog = [
-  (moblie1 = new Mobile("samsung", 10000, "android", 1)),
-  (moblie2 = new Mobile("iphone", 40000, "ios", 2)),
-  (moblie3 = new Mobile("realme", 7000, "android", 2)),
-  (moblie4 = new Mobile("hawawei", 7000, "android", 2)),
-];
 
-console.log(moblie1);
-console.log(moblie2);
-console.log(moblie1.getDiscount(10));
+Animal.prototype.speak = function() {
+    return `${this.name} makes a sound`;
+};
 
-// Catalog
-catalog.forEach((mobile) => {
-  console.log(mobile.getDetails());
-});
+function Dog(name, breed) {
+    Animal.call(this, name); 
+    this.breed = breed;
+}
+
+
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+
+
+Dog.prototype.bark = function() {
+    return `${this.name} barks!`;
+};
+
+const dog1 = new Dog('Rex', 'Golden');
+
+console.log(dog1.speak()); 
+console.log(dog1.bark());  
+
+const car = {
+    noise() {
+        return `PeeP PeeP !`;
+    }
+};
+
+// Create.object
+const car1 = Object.create(car);
+car.name = 'BMW';
+car.horn = function() {
+    return `peep !`;
+};
+console.log(car.name)
+console.log(car.noise())
